@@ -1,0 +1,970 @@
+{
+  "checkedAt": "2026-10-30T02:30:13.522Z",
+  "source": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
+  "scope": "只读取并解析公开订阅配置；未下载或执行Spider/JAR/JS，未验证站点接口或播放",
+  "keys": [
+    "spider",
+    "wallpaper",
+    "sites",
+    "rules",
+    "logo",
+    "hosts",
+    "lives"
+  ],
+  "siteCount": 48,
+  "siteTypes": [
+    3
+  ],
+  "cspEntries": 45,
+  "javascriptEntries": 3,
+  "hasGlobalSpider": true,
+  "liveCount": 6,
+  "sites": [
+    {
+      "key": "点我切源",
+      "name": "豆豆┃片单<修复所有>",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_DouDouGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "indexs",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "MDrive",
+      "name": "🗂我的云盘┃配置",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_MyDriveGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "changeable",
+        "indexs",
+        "searchable",
+        "style",
+        "ext"
+      ]
+    },
+    {
+      "key": "玩偶",
+      "name": "👽玩偶哥哥┃4K弹幕",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_WoGGGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "YGP",
+      "name": "🚀荐影┃预告片",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_YGPGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "MTV1",
+      "name": "🎙️易听┃音乐",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_MusicGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "seed",
+      "name": "💡聚剧┃四盘",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_SeedhubGuard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "ext",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "indexs"
+      ]
+    },
+    {
+      "key": "光影",
+      "name": "🌞光影┃不卡",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_T4Guard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "厂长",
+      "name": "📔厂长┃不卡",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_NewCzGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "海绵",
+      "name": "🐬海绵┃不卡",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_HmysGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "立播",
+      "name": "🌟立播┃不卡",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_LibvioGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "瓜子",
+      "name": "👀瓜子┃不卡",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_AppgzGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "比特",
+      "name": "🍄比特┃不卡",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BttwooGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "糯米",
+      "name": "🍓糯米┃秒播",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_NmyswvGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "文采",
+      "name": "💮文采┃秒播",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_JpysGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "奶酪",
+      "name": "🧀奶酪┃秒播",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_T4Guard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "热播",
+      "name": "📺热播┃多线",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_AppTTGuard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "风云",
+      "name": "☁️风云┃多线",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_FyGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "ext",
+        "quickSearch",
+        "searchable",
+        "changeable"
+      ]
+    },
+    {
+      "key": "视界",
+      "name": "🌸茉莉┃多线",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_App99Guard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "剧圈",
+      "name": "🐻剧圈┃多线",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_AppSxGuard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "荐片",
+      "name": "🥝荐片┃多线",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_JPJGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "奥特",
+      "name": "🏝奥特┃多线",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_AueteGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "新6V",
+      "name": "🧲新6V┃磁力",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_SixVGuard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "AiDj",
+      "name": "❤️AI┃短漫剧",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_AiDjGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "ext",
+        "indexs",
+        "quickSearch",
+        "searchable",
+        "changeable"
+      ]
+    },
+    {
+      "key": "Dm84",
+      "name": "🚌巴士┃动漫",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_Dm84Guard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "看球",
+      "name": "⚽八八┃看球",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_KanqiuGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "timeout",
+        "searchable",
+        "changeable",
+        "style"
+      ]
+    },
+    {
+      "key": "多多",
+      "name": "🏀多多┃回放",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_DoubaoGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "style"
+      ]
+    },
+    {
+      "key": "吃瓜",
+      "name": "🏐吃瓜┃看球",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_LiveGzGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "style"
+      ]
+    },
+    {
+      "key": "alllive",
+      "name": "🎮一直播┃直播",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_AllliveGuard",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "MTV",
+      "name": "🎶明星┃MV",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "有声小说",
+      "name": "🎧有声┃小说",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_Tingshu275Guard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "Aid",
+      "name": "🚑急救┃教学",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_FirstAidGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "style"
+      ]
+    },
+    {
+      "key": "虎牙js",
+      "name": "🐯虎牙┃直播",
+      "type": 3,
+      "entryKind": "javascript-url",
+      "api": "https://ghproxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "ext",
+        "style",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "斗鱼js",
+      "name": "🐟斗鱼┃直播",
+      "type": 3,
+      "entryKind": "javascript-url",
+      "api": "https://ghproxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "ext",
+        "style",
+        "timeout",
+        "playerType",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "ZPan",
+      "name": "🎈盘搜┃四盘",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_S_zpsGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext",
+        "indexs",
+        "style"
+      ]
+    },
+    {
+      "key": "JPan",
+      "name": "🦋易搜┃四盘",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_S_zpsGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext",
+        "indexs",
+        "style"
+      ]
+    },
+    {
+      "key": "YpanSo",
+      "name": "🐌盘她┃夸父",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_YpanSoGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "BpanSo",
+      "name": "🐞盘他┃嘟嘟",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BpanSoGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "抠搜",
+      "name": "🌶️抠抠┃搜搜",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_KkSsGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "UC",
+      "name": "🌈优汐┃搜搜",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_UuSsGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "Bili",
+      "name": "🅱哔哔合集┃弹幕",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "Biliych",
+      "name": "🅱哔哔演唱会┃弹幕",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "dr_兔小贝",
+      "name": "📚儿童┃启蒙",
+      "type": 3,
+      "entryKind": "javascript-url",
+      "api": "https://ghproxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+      "hasExt": true,
+      "extType": "string",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "ext",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    },
+    {
+      "key": "少儿教育",
+      "name": "📚少儿┃教育",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "小学课堂",
+      "name": "📚小学┃课堂",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "初中课堂",
+      "name": "📚初中┃课堂",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "高中教育",
+      "name": "📚高中┃课堂",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_BiliGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "style",
+        "searchable",
+        "quickSearch",
+        "changeable",
+        "ext"
+      ]
+    },
+    {
+      "key": "push_agent",
+      "name": "🛴手机┃推送",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_PushGuard",
+      "hasExt": true,
+      "extType": "object",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "ext"
+      ]
+    },
+    {
+      "key": "cc",
+      "name": "请勿信视频中任何广告",
+      "type": 3,
+      "entryKind": "csp",
+      "api": "csp_XPathGuard",
+      "hasExt": false,
+      "extType": "undefined",
+      "fields": [
+        "key",
+        "name",
+        "type",
+        "api",
+        "searchable",
+        "quickSearch",
+        "changeable"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "source": "https://xiuxiu-pro-new.meitudata.com/posters/c2759c9c03b22f2242475139110972c7.jpg",
+  "scope": "只读静态ELF/Dex检查，未执行远端工件",
+  "sha256": "898e9d7e787c01c2f24ff2457de08533f6b81b165a18103768e1898ba935693c",
+  "md5": "d2a33b53d09ec59c4cb7e3f482ef3907",
+  "nativeLibraries": [
+    {
+      "path": "assets/ftyguard_v7.so",
+      "bytes": 81520,
+      "bits": 32,
+      "machine": 40,
+      "architecture": "ARM",
+      "needed": [
+        "libdl.so",
+        "liblog.so",
+        "libandroid.so",
+        "libc.so",
+        "libm.so"
+      ]
+    },
+    {
+      "path": "assets/ftyguard_v8.so",
+      "bytes": 102440,
+      "bits": 64,
+      "machine": 183,
+      "architecture": "AArch64",
+      "needed": [
+        "liblog.so",
+        "libandroid.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ]
+    }
+  ],
+  "dex": {
+    "version": "dex\n035\u0000",
+    "classDefinitions": 76,
+    "androidTypes": [
+      "Landroid/app/Application;",
+      "Landroid/content/Context;",
+      "Landroid/content/SharedPreferences$Editor;",
+      "Landroid/content/SharedPreferences;",
+      "Landroid/content/pm/ApplicationInfo;",
+      "Landroid/os/Build$VERSION;",
+      "Landroid/os/Build;",
+      "Landroid/util/Log;",
+      "Ldalvik/system/DexClassLoader;"
+    ]
+  }
+}

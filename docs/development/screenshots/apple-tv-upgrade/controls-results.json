@@ -1,0 +1,107 @@
+[
+  {
+    "check": "shelf-boundary",
+    "passed": true
+  },
+  {
+    "check": "home-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "browse-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "search-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "cross-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "favorites-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "history-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "detail-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "controls-hover-and-targets",
+    "sizes": [
+      {
+        "name": "暂停",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "后退10秒",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "快进10秒",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "静音",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "选择集数和线路",
+        "width": 79,
+        "height": 44
+      },
+      {
+        "name": "画中画",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "全屏",
+        "width": 44,
+        "height": 44
+      }
+    ],
+    "passed": true
+  },
+  {
+    "check": "player-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "cross-partial",
+    "passed": true
+  },
+  {
+    "check": "cross-empty",
+    "passed": true
+  },
+  {
+    "check": "cross-fail",
+    "passed": true
+  },
+  {
+    "check": "changed-query-and-reduced-motion",
+    "passed": true
+  },
+  {
+    "check": "media-retry",
+    "passed": true
+  }
+]

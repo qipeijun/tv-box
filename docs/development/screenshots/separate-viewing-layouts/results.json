@@ -1,0 +1,54 @@
+[
+  {
+    "navigationAutoHide": true,
+    "posterHover": true,
+    "width": 1440,
+    "layout": "desktop",
+    "detailOverflow": false,
+    "navigationOverlap": false,
+    "favorite": true,
+    "expandSynopsis": true,
+    "switchEpisode": true,
+    "fullscreen": true,
+    "returnEpisode": true
+  },
+  {
+    "navigationAutoHide": true,
+    "posterHover": true,
+    "width": 800,
+    "layout": "desktop",
+    "detailOverflow": false,
+    "navigationOverlap": false,
+    "favorite": true,
+    "expandSynopsis": true,
+    "switchEpisode": true,
+    "fullscreen": true,
+    "returnEpisode": true
+  },
+  {
+    "navigationAutoHide": true,
+    "posterHover": true,
+    "width": 390,
+    "layout": "mobile",
+    "detailOverflow": false,
+    "navigationOverlap": false,
+    "favorite": true,
+    "expandSynopsis": true,
+    "switchEpisode": true,
+    "fullscreen": true,
+    "returnEpisode": true
+  },
+  {
+    "navigationAutoHide": true,
+    "posterHover": true,
+    "width": 320,
+    "layout": "mobile",
+    "detailOverflow": false,
+    "navigationOverlap": false,
+    "favorite": true,
+    "expandSynopsis": true,
+    "switchEpisode": true,
+    "fullscreen": true,
+    "returnEpisode": true
+  }
+]

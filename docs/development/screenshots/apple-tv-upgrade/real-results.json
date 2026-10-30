@@ -1,0 +1,140 @@
+[
+  {
+    "check": "home-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "search-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "browse-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "detail-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "real-playing-1280",
+    "before": 1.010761,
+    "after": 1.532967,
+    "film": "99329",
+    "episode": "1:0"
+  },
+  {
+    "check": "player-1280",
+    "width": 1280,
+    "scroll": 1280
+  },
+  {
+    "check": "home-390",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "search-390",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "browse-390",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "detail-390",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "real-playing-390",
+    "before": 1.632113,
+    "after": 2.152023,
+    "film": "99329",
+    "episode": "1:0"
+  },
+  {
+    "check": "hidden-controls-tap",
+    "events": [
+      {
+        "type": "pointerdown",
+        "visible": "true"
+      },
+      {
+        "type": "pointerup",
+        "visible": "true"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "check": "player-390",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "home-320",
+    "width": 320,
+    "scroll": 320
+  },
+  {
+    "check": "search-320",
+    "width": 320,
+    "scroll": 320
+  },
+  {
+    "check": "browse-320",
+    "width": 320,
+    "scroll": 320
+  },
+  {
+    "check": "detail-320",
+    "width": 320,
+    "scroll": 320
+  },
+  {
+    "check": "real-playing-320",
+    "before": 4.747268,
+    "after": 5.261352,
+    "film": "99329",
+    "episode": "1:0"
+  },
+  {
+    "check": "player-320",
+    "width": 320,
+    "scroll": 320
+  },
+  {
+    "check": "player-landscape",
+    "width": 844,
+    "scroll": 844
+  },
+  {
+    "check": "player-fullscreen",
+    "width": 844,
+    "scroll": 844
+  },
+  {
+    "check": "library",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "library-text",
+    "text": "跳到内容\n现在观看\n浏览\n直播\n搜索\n返回观影\n你的片库\n\n选择内容来源，或管理自己的订阅。\n\n内置片库\n映\n映场精选片库\n25 个已核验内容接口，打开即可浏览\n扩\n扩展影视片库\n13 个新增入口，内容接口与样本清单已核验\n饭\n饭太硬\n点播依赖 Android，直播入口可在直播片库查看\nM\nMoonTV 公共片库\n电影天堂、无尽、魔都等公开内容入口\nT\nTVboxorg 公共片库\n公开维护的聚合订阅，可手动更新\nZ\nZoe 公共片库\n另一组公开维护的影视订阅\n我的订阅 0\n添加\n\n内置片库已可使用，也可以添加自己的订阅。"
+  },
+  {
+    "check": "live",
+    "width": 390,
+    "scroll": 390
+  },
+  {
+    "check": "live-text",
+    "text": "跳到内容\n现在观看\n浏览\n直播\n搜索\n\n此刻，在发生。\n\n直播\n\n公共直播精选\n\n直播片库\n返回点播\nCGTN\n\n新闻\n\n直播\n\n频道\n\n当前频道\n\nCGTN\n\n新闻\n\n切换频道\n\n频道由第三方提供，可能有地域、跨域或编码限制。\n\n频道 3\n全部\n新闻\n纪实\nCGTN\n新闻\nCGTN Documentary\n纪实\nCNA Originals\n纪实"
+  }
+]

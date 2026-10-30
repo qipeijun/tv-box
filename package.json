@@ -1,0 +1,52 @@
+{
+  "name": "tv-box-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "npm@11.19.0",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:lan": "node scripts/dev-lan.mjs",
+    "dev:web": "vite --port 5190 --strictPort",
+    "dev:api": "node --watch server/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test server/*.test.js src/lib/*.test.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "NODE_ENV=production node server/index.js",
+    "verify:production": "node scripts/verify-production.mjs",
+    "start:lan": "node --env-file=.env.lan server/index.js"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.8",
+    "cheerio": "1.2.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "fastify": "^5.12.7",
+    "ipaddr.js": "^2.5.0",
+    "jsonc-parser": "^3.3.1",
+    "lucide-react": "^1.64.0",
+    "qrcode": "1.5.4",
+    "radix-ui": "^1.8.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0",
+    "tough-cookie": "6.0.2",
+    "undici": "^8.12.3",
+    "video.js": "^8.24.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.9",
+    "vite": "^8.3.5"
+  }
+}

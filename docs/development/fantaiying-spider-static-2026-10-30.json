@@ -1,0 +1,25 @@
+{
+  "source": "https://xiuxiu-pro-new.meitudata.com/posters/c2759c9c03b22f2242475139110972c7.jpg",
+  "scope": "只读取工件并静态检查文件结构，未执行代码",
+  "bytes": 1386820,
+  "contentType": "application/zip",
+  "md5": "d2a33b53d09ec59c4cb7e3f482ef3907",
+  "expectedMd5": "d2a33b53d09ec59c4cb7e3f482ef3907",
+  "magicHex": "504b03041400080808000770",
+  "zip": true,
+  "entryCount": 5,
+  "dexFiles": [
+    "classes.dex"
+  ],
+  "classFileCount": 0,
+  "nativeLibraries": [
+    "assets/ftyguard_v7.so",
+    "assets/ftyguard_v8.so"
+  ],
+  "androidReferenceCount": 9,
+  "runtimeReferences": [
+    "Landroid/app/Application;",
+    "Landroid/content/Context;",
+    "Ldalvik/system/DexClassLoader;"
+  ]
+}

@@ -1,0 +1,140 @@
+/* 详情沿参考图采用画面融入浅色正文；两端只共享颜色与内容控件。 */
+.viewing-detail {
+  --detail-background: #fafafa;
+  --detail-muted: #62656a;
+  --detail-surface: #eeeef0;
+  --detail-line: #17191c1a;
+  --background: #fafafa;
+  --foreground: #151619;
+  --muted-foreground: #62656a;
+  --border: #d9dadd;
+  --input: #d9dadd;
+  --accent: #e9eaec;
+  --accent-foreground: #151619;
+  --primary: #111214;
+  --primary-foreground: #fff;
+  --ring: #3b657b;
+  animation: none;
+}
+.film-navigation { position: absolute; z-index: 3; inset: 20px 4% auto; display: flex; justify-content: space-between; gap: 16px; }
+.film-navigation [data-slot="button"] { color: #fff; background: #111214a8; border: 1px solid #ffffff38; backdrop-filter: blur(16px); min-height: 48px; max-width: 65%; border-radius: 100px; }
+.film-navigation [data-slot="button"] span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.film-title { font-family: ui-rounded, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; color: #151619; font-weight: 650; letter-spacing: -.025em; line-height: 1.3; text-wrap: balance; overflow-wrap: anywhere; outline: none; }
+.film-eyebrow { font-size: 12px; color: var(--detail-muted); margin-bottom: 8px; }
+.film-facts { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; color: var(--detail-muted); font-size: 13px; font-weight: 550; line-height: 1.7; }
+.film-facts > span + span::before { content: '·'; margin-right: 14px; opacity: .5; }
+.viewing-detail .detail-rating { color: #685112; }
+.viewing-detail .detail-rating strong { font-size: 16px; }
+.viewing-detail .detail-rating span { font-size: 11px; }
+.film-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.film-actions [data-slot="button"] { min-height: 44px; padding-inline: 12px; border-radius: 8px; font-size: 12px; max-width: 100%; white-space: normal; height: auto; transition-property: opacity, transform; transition-duration: 160ms; transition-timing-function: var(--ease-out); }
+.film-actions [data-variant="default"] { background: #111214; color: #fff; font-size: 16px; font-weight: 650; min-height: 52px; }
+.film-actions [data-variant="outline"], .film-actions [data-variant="ghost"] { color: #56595f; background: transparent; border-color: transparent; }
+.film-actions [data-variant="default"]:active:not(:focus-visible) { transform: scale(.98); }
+.film-actions > p, .film-playback-context { width: 100%; margin-top: 6px; font-size: 11px; color: var(--detail-muted); line-height: 1.7; overflow-wrap: anywhere; }
+.film-loading-poster { width: 100%; height: 100%; background: #e6e7e9; }
+.film-loading-title { width: 60%; height: 36px; margin-bottom: 16px; background: #dedfe1; }
+.film-loading-facts { width: 45%; height: 16px; margin-bottom: 18px; background: #e6e7e9; }
+.viewing-detail h2 { color: #151619; font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
+.viewing-detail .detail-synopsis { max-width: none; }
+.viewing-detail .detail-synopsis > p { font-size: 14px; line-height: 1.85; color: #4d5055; }
+.viewing-detail .detail-synopsis > button { color: #56595f; }
+.viewing-detail .detail-episodes { scroll-margin-top: 24px; border: 0; }
+.viewing-detail .detail-episodes .episode-picker { padding: 24px 0 32px; }
+.viewing-detail .episode-line-tabs > button, .viewing-detail .episode-group-tabs > button { color: #62656a; border-color: #dedfe2; background: transparent; }
+.viewing-detail .episode-line-tabs > button[data-state="on"], .viewing-detail .episode-group-tabs > button[data-state="on"] { color: #111214; border-color: #222429; background: #eceef0; }
+.viewing-detail .episode-picker .episode-tile { color: #33363b; background: #eeeff1; border-color: transparent; }
+.viewing-detail .episode-picker .episode-tile[aria-current="true"] { color: #111214; background: #dce3e7; border-color: #627786; }
+.viewing-detail .detail-source-cast, .viewing-detail .detail-director, .viewing-detail .detail-release { overflow-wrap: anywhere; }
+.viewing-detail .detail-release { margin-top: 24px; }
+.viewing-detail .cast-rail { grid-auto-columns: 108px; gap: 24px; }
+.viewing-detail .cast-portrait { width: 96px; height: 96px; }
+.viewing-detail .detail-credits { padding: 28px 0; border-top: 1px solid var(--detail-line); }
+.viewing-detail .metadata-search { margin-top: 16px; }
+.viewing-detail .film-poster .poster-fallback { background: #e5e6e9; color: #858990; }
+
+/* 手机独立构图：纵向封面与渐变、全宽播放按钮，向下阅读简介与选集。 */
+.film-mobile-hero { position: relative; padding-bottom: 26px; }
+.film-mobile-cover { position: relative; height: 480px; max-height: 64svh; min-height: 300px; overflow: hidden; }
+.film-mobile-cover > img, .film-mobile-cover > .film-poster { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; border-radius: 0; }
+.film-mobile-cover::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(#0003, transparent 22%, #fafafa00 48%, #fafafa 100%); }
+.film-mobile-summary { position: relative; margin-top: -56px; padding: 0 22px; }
+.film-mobile .film-title { font-size: 29px; }
+.film-mobile .film-facts { margin-block: 14px 18px; font-size: 12px; gap: 5px 10px; }
+.film-mobile .film-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.film-mobile .film-actions [data-variant="default"] { grid-column: 1 / -1; min-height: 52px; margin-bottom: 4px; }
+.film-mobile .film-actions [data-slot="button"]:not([data-variant="default"]) { padding: 8px 2px; font-size: 12px; gap: 6px; }
+.film-mobile .film-actions [data-slot="button"] svg { width: 17px; height: 17px; flex-shrink: 0; }
+.film-mobile .film-actions > p { grid-column: 1/-1; }
+.film-mobile .film-playback-context { text-align: center; }
+.film-mobile-content { padding: 0 22px 32px; }
+.film-mobile-content > .detail-synopsis { padding: 0 0 18px; }
+.film-mobile-content .metadata-search form { flex-wrap: wrap; }
+.film-mobile-content .metadata-search form [data-slot="field"] { flex-basis: 100%; }
+.film-mobile-content .metadata-search form [data-slot="button"] { width: 100%; }
+.viewing-detail-mobile .film-navigation { inset: max(16px, env(safe-area-inset-top)) 16px auto; }
+.viewing-detail-mobile .film-navigation [data-slot="button"]:first-child { width: 48px; font-size: 0; gap: 0; padding: 0; }
+.viewing-detail-mobile .film-navigation [data-slot="button"] span { font-size: 11px; }
+.film-mobile-cover .poster-fallback { height: 100%; }
+.film-mobile-cover .poster-fallback span { display: none; }
+.film-mobile[data-compact-artwork] .film-mobile-cover { min-height: 0; height: 280px; padding: 88px 22px 0; }
+.film-mobile[data-compact-artwork] .film-mobile-cover > img,
+.film-mobile[data-compact-artwork] .film-mobile-cover > .film-poster { width: 128px; height: 192px; object-fit: contain; margin: auto; border-radius: 10px; }
+.film-mobile[data-compact-artwork] .film-mobile-cover::after { display: none; }
+.film-mobile[data-compact-artwork] .film-mobile-summary { margin-top: 24px; }
+
+/* PC 独立构图：通栏画面下缘聚合影片信息，正文与首屏共用阅读边界。 */
+.film-desktop { --film-content-width: 1120px; --film-gutter: 40px; }
+.film-desktop-hero { position: relative; }
+.film-desktop-scene { position: relative; height: min(70vh, 740px); min-height: 440px; overflow: hidden; background: #e6e7e9; }
+.film-desktop-scene > img, .film-desktop-scene > .film-poster { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.film-desktop-scene::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, #0002 0%, transparent 30%, #fafafa00 48%, #fafafabf 82%, #fafafa 100%); }
+.film-desktop-intro { position: relative; margin-top: -150px; width: min(calc(100% - 2 * var(--film-gutter)), var(--film-content-width)); margin-inline: auto; padding: 0 0 32px; }
+.film-desktop .film-eyebrow { display: none; }
+.film-desktop .film-title { font-size: clamp(28px, 2.4vw, 38px); max-width: 800px; margin-bottom: 12px; }
+.film-desktop-play { min-width: 0; margin-top: 24px; }
+.film-desktop-play .film-actions { gap: 10px; }
+.film-desktop-play .film-actions [data-slot="button"] { min-height: 44px; box-shadow: none; }
+.film-desktop-play .film-actions [data-variant="default"] { min-width: 156px; min-height: 44px; padding-inline: 24px; margin-right: 4px; font-size: 15px; }
+.film-desktop-play .film-actions [data-slot="button"]:not([data-variant="default"]) { padding: 10px 14px; gap: 8px; font-size: 13px; }
+.film-desktop .film-playback-context { margin-top: 8px; }
+.film-desktop-description { min-width: 0; max-width: 720px; }
+.film-desktop-description .film-facts { margin-bottom: 16px; }
+.film-desktop-description .detail-synopsis { padding: 0; }
+.film-desktop-description .detail-synopsis > h2 { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.film-desktop-description .detail-synopsis > p { margin: 0; font-size: 14px; line-height: 1.8; }
+.film-desktop-description .synopsis-collapsed { -webkit-line-clamp: 3; }
+.film-desktop-description .detail-synopsis > button { min-height: 36px; margin: 0; }
+.film-desktop-content { width: min(calc(100% - 2 * var(--film-gutter)), var(--film-content-width)); margin-inline: auto; padding: 0 0 48px; }
+.film-desktop-information { margin-top: 18px; }
+/* 素材不足时使用完整海报，不用竖图裁切替代通栏横图。 */
+.film-desktop-hero:not([data-has-backdrop]) { display: grid; grid-template-columns: fit-content(220px) minmax(0, 1fr); gap: 40px; justify-content: center; align-items: center; padding: 120px max(var(--film-gutter), calc((100% - var(--film-content-width)) / 2)) 40px; background: linear-gradient(145deg, #e9edf0, #fafafa 80%); }
+.film-desktop-hero:not([data-has-backdrop]) .film-desktop-scene { height: auto; min-height: 0; background: transparent; display: flex; justify-content: center; }
+.film-desktop-hero:not([data-has-backdrop]) .film-desktop-scene::after { display: none; }
+.film-desktop-hero:not([data-has-backdrop]) .film-desktop-scene > img { width: 100%; height: auto; max-width: 100%; max-height: 540px; object-fit: contain; border-radius: 12px; box-shadow: 0 18px 48px #17191c20; }
+.film-desktop-hero:not([data-has-backdrop]) .film-desktop-intro { width: auto; margin: 0; padding: 0; min-width: 0; }
+.film-desktop[data-has-artwork="false"] .film-desktop-hero:not([data-has-backdrop]) { grid-template-columns: minmax(0, var(--film-content-width)); padding-bottom: 36px; }
+.film-desktop[data-has-artwork="false"] .film-desktop-scene { display: none; }
+
+/* 低清素材以高斯模糊铺成氛围层，清晰前景与文字独立于滤镜。 */
+.film-desktop-hero[data-ambient] .film-desktop-scene { position: absolute; inset: 0; height: 100%; min-height: 0; }
+.film-desktop-hero[data-ambient] .film-desktop-scene > img { filter: blur(32px); transform: scale(1.12); opacity: .28; }
+.film-desktop-hero[data-ambient] .film-desktop-scene::after { background: linear-gradient(180deg, #fafafa55, #fafafad9 70%, #fafafa); }
+.film-desktop-hero[data-ambient] .film-desktop-intro { display: grid; grid-template-columns: fit-content(220px) minmax(0, 1fr); gap: 40px; align-items: center; justify-content: center; margin-top: 0; padding: 120px 0 40px; }
+.film-desktop-copy { min-width: 0; }
+.film-desktop-poster { display: flex; align-items: center; justify-content: flex-start; max-width: 220px; }
+.film-desktop-poster > img { width: 100%; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 18px 48px #17191c26; }
+
+/* 无分集图片时直接呈现文字选集，不预留缩略图空间。 */
+.film-desktop .episode-picker .episode-tiles { grid-template-columns: repeat(auto-fill, minmax(min(144px, 100%), 1fr)); gap: 10px; }
+.film-desktop .episode-picker .episode-tile { min-height: 48px; padding: 12px 22px; border-radius: 8px; }
+.film-desktop .episode-picker .episode-tile > span { font-size: 14px; font-weight: 500; }
+@media (hover: hover) and (pointer: fine) {
+  .film-actions [data-variant="ghost"]:hover, .film-actions [data-variant="outline"]:hover { background: #1516190a; color: #151619; }
+  .film-navigation button:hover { background: #242830; }
+  .viewing-detail .episode-tile:hover { background: #e0e4e7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film-actions [data-slot="button"] { transition: opacity 100ms linear; }
+  .film-actions [data-variant="default"]:active:not(:focus-visible) { transform: none; }
+}
