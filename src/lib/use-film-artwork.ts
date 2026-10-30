@@ -41,7 +41,7 @@ export function useFilmArtwork(sourcePoster: string | null, extraPoster: string 
       resolution?.removeEventListener("change", measure);
     };
   }, [mobile]);
-  const box = { width: view.width, height: mobile ? Math.max(300, Math.min(480, view.height * .64)) : Math.max(440, Math.min(740, view.height * .7)) };
+  const box = { width: view.width, height: mobile ? 320 : 460 };
   // 优先使用像素更充足的已匹配海报；同尺寸保留片库原图。
   const posters = [sourcePoster, extraPoster].filter((url): url is string => !!url && !!sizes[url]);
   posters.sort((a, b) => sizes[b]!.width * sizes[b]!.height - sizes[a]!.width * sizes[a]!.height);
@@ -54,6 +54,6 @@ export function useFilmArtwork(sourcePoster: string | null, extraPoster: string 
     // 低清素材仅作为模糊氛围层，完整前景海报继续限制物理像素放大。
     ambient: !mobile && !useBackdrop ? (background && sizes[background] ? background : poster) : null,
     // 完整海报同样限制物理像素放大，极低清图片宁可小幅展示。
-    posterStyle: posterSize && !immersivePoster ? { maxWidth: Math.min(mobile ? 128 : 360, posterSize.width / view.density, (mobile ? 192 : 540) * posterSize.width / posterSize.height), maxHeight: mobile ? 192 : 540 } : undefined,
+    posterStyle: posterSize && !immersivePoster ? { maxWidth: Math.min(mobile ? 128 : 220, posterSize.width / view.density, (mobile ? 192 : 300) * posterSize.width / posterSize.height), maxHeight: mobile ? 192 : 300 } : undefined,
   };
 }

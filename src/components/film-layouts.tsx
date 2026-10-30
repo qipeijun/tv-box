@@ -19,7 +19,7 @@ type FilmLayoutProps = {
 
 /** 手机以海报开场，主操作紧随片名，简介与选集按阅读顺序展开。 */
 export function MobileFilmLayout(props: FilmLayoutProps) {
-  return <div ref={props.artworkRef} className="film-mobile" data-compact-artwork={props.compactArtwork || undefined}>
+  return <div ref={props.artworkRef} className="film-mobile" data-has-artwork={props.hasArtwork !== false} data-compact-artwork={props.compactArtwork || undefined}>
     <section className="film-mobile-hero" aria-label={props.title}>
       <div className="film-mobile-cover">{props.artwork}</div>
       <div className="film-mobile-summary">{props.identity}{props.facts}{props.actions}</div>
@@ -30,16 +30,16 @@ export function MobileFilmLayout(props: FilmLayoutProps) {
   </div>;
 }
 
-/** PC 以清晰横图或完整大海报开场，影片信息连续阅读，操作紧随简介。 */
+/** PC 的通栏画面与前景信息各占固定区域，补充图片不切换首屏结构。 */
 export function DesktopFilmLayout(props: FilmLayoutProps) {
   return <div ref={props.artworkRef} className="film-desktop" data-has-artwork={props.hasArtwork !== false}>
-    <section className="film-desktop-hero" aria-label={props.title} data-has-backdrop={!!(props.backdrop || props.ambientBackdrop) || undefined} data-ambient={!!props.ambientBackdrop || undefined}>
-      <div className="film-desktop-scene">{props.backdrop || props.ambientBackdrop || props.artwork}</div>
+    <section className="film-desktop-hero" aria-label={props.title}>
+      <div className="film-desktop-scene" aria-hidden="true">{props.backdrop || props.ambientBackdrop}</div>
       <div className="film-desktop-intro">
-        {props.ambientBackdrop ? <div className="film-desktop-poster">{props.artwork}</div> : null}
+        {props.hasArtwork !== false ? <div className="film-desktop-poster">{props.artwork}</div> : null}
         <div className="film-desktop-copy">
-        <div className="film-desktop-description">{props.identity}{props.facts}{props.synopsis}</div>
-        <div className="film-desktop-play">{props.actions}</div>
+          <div className="film-desktop-description">{props.identity}{props.facts}{props.synopsis}</div>
+          <div className="film-desktop-play">{props.actions}</div>
         </div>
       </div>
     </section>

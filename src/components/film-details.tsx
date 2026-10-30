@@ -138,7 +138,7 @@ export function FilmDetails({
             continuePosition,
             onFindElsewhere,
             descending, onDescendingChange,
-  favorite, favoriteError, favoriteWritable, onFavorite,
+            favorite, favoriteError, favoriteWritable, onFavorite,
           }}
         />
       ) : null}
@@ -273,12 +273,12 @@ function FilmContent({
                   size="lg"
                   onClick={() => (selected ? onPlay(selected) : showEpisodes())}
                 >
-                  <Play data-icon="inline-start" fill="currentColor" />
-                  {selected
+                  <Play data-icon="inline-start" fill="currentColor" aria-hidden="true" />
+                  <span>{selected
                     ? selected.id === continueEpisodeId
                       ? `继续 ${selected.name} · ${playbackTime(continuePosition)}`
                       : `播放 ${selected.name}`
-                    : "选择集数"}
+                    : "选择集数"}</span>
                 </Button>
                 {showChoices ? <Button variant="ghost" onClick={showEpisodes}>
                   <ListVideo data-icon="inline-start" />

@@ -14,6 +14,7 @@
   --primary: #111214;
   --primary-foreground: #fff;
   --ring: #3b657b;
+  color-scheme: light;
   animation: none;
 }
 .film-navigation { position: absolute; z-index: 3; inset: 20px 4% auto; display: flex; justify-content: space-between; gap: 16px; }
@@ -30,6 +31,7 @@
 .film-actions [data-slot="button"] { min-height: 44px; padding-inline: 12px; border-radius: 8px; font-size: 12px; max-width: 100%; white-space: normal; height: auto; transition-property: opacity, transform; transition-duration: 160ms; transition-timing-function: var(--ease-out); }
 .film-actions [data-variant="default"] { background: #111214; color: #fff; font-size: 16px; font-weight: 650; min-height: 52px; }
 .film-actions [data-variant="outline"], .film-actions [data-variant="ghost"] { color: #56595f; background: transparent; border-color: transparent; }
+.film-actions [data-variant="default"] > span { min-width: 0; overflow-wrap: anywhere; }
 .film-actions [data-variant="default"]:active:not(:focus-visible) { transform: scale(.98); }
 .film-actions > p, .film-playback-context { width: 100%; margin-top: 6px; font-size: 11px; color: var(--detail-muted); line-height: 1.7; overflow-wrap: anywhere; }
 .film-loading-poster { width: 100%; height: 100%; background: #e6e7e9; }
@@ -55,10 +57,10 @@
 
 /* 手机独立构图：纵向封面与渐变、全宽播放按钮，向下阅读简介与选集。 */
 .film-mobile-hero { position: relative; padding-bottom: 26px; }
-.film-mobile-cover { position: relative; height: 480px; max-height: 64svh; min-height: 300px; overflow: hidden; }
+.film-mobile-cover { position: relative; height: 320px; overflow: hidden; }
 .film-mobile-cover > img, .film-mobile-cover > .film-poster { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; border-radius: 0; }
 .film-mobile-cover::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(#0003, transparent 22%, #fafafa00 48%, #fafafa 100%); }
-.film-mobile-summary { position: relative; margin-top: -56px; padding: 0 22px; }
+.film-mobile-summary { position: relative; margin-top: 24px; padding: 0 22px; }
 .film-mobile .film-title { font-size: 29px; }
 .film-mobile .film-facts { margin-block: 14px 18px; font-size: 12px; gap: 5px 10px; }
 .film-mobile .film-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
@@ -77,19 +79,26 @@
 .viewing-detail-mobile .film-navigation [data-slot="button"] span { font-size: 11px; }
 .film-mobile-cover .poster-fallback { height: 100%; }
 .film-mobile-cover .poster-fallback span { display: none; }
-.film-mobile[data-compact-artwork] .film-mobile-cover { min-height: 0; height: 280px; padding: 88px 22px 0; }
+.film-mobile[data-compact-artwork] .film-mobile-cover { padding: 104px 22px 24px; display: flex; align-items: center; justify-content: center; }
 .film-mobile[data-compact-artwork] .film-mobile-cover > img,
 .film-mobile[data-compact-artwork] .film-mobile-cover > .film-poster { width: 128px; height: 192px; object-fit: contain; margin: auto; border-radius: 10px; }
 .film-mobile[data-compact-artwork] .film-mobile-cover::after { display: none; }
-.film-mobile[data-compact-artwork] .film-mobile-summary { margin-top: 24px; }
+.film-mobile[data-has-artwork="false"] .film-mobile-cover { display: none; }
+.film-mobile[data-has-artwork="false"] .film-mobile-summary { margin-top: 0; padding-top: max(100px, calc(env(safe-area-inset-top) + 84px)); }
 
-/* PC 独立构图：通栏画面下缘聚合影片信息，正文与首屏共用阅读边界。 */
+/* PC 独立构图：画面在背景层更新，前景海报槽与播放信息保持稳定。 */
 .film-desktop { --film-content-width: 1120px; --film-gutter: 40px; }
-.film-desktop-hero { position: relative; }
-.film-desktop-scene { position: relative; height: min(70vh, 740px); min-height: 440px; overflow: hidden; background: #e6e7e9; }
-.film-desktop-scene > img, .film-desktop-scene > .film-poster { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-.film-desktop-scene::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, #0002 0%, transparent 30%, #fafafa00 48%, #fafafabf 82%, #fafafa 100%); }
-.film-desktop-intro { position: relative; margin-top: -150px; width: min(calc(100% - 2 * var(--film-gutter)), var(--film-content-width)); margin-inline: auto; padding: 0 0 32px; }
+.film-desktop-hero { position: relative; background: var(--detail-background); }
+.film-desktop-scene { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.film-desktop-scene > img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.film-desktop-scene > img:not(.film-backdrop) { filter: blur(32px); transform: scale(1.12); opacity: .28; }
+.film-desktop-scene::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #fafafa55, #fafafad9 70%, #fafafa); }
+.film-desktop-intro { position: relative; display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; gap: 40px; width: min(calc(100% - 2 * var(--film-gutter)), var(--film-content-width)); margin-inline: auto; padding: 120px 0 40px; min-height: 460px; }
+.film-desktop[data-has-artwork="false"] .film-desktop-intro { grid-template-columns: minmax(0, 1fr); min-height: 320px; }
+.film-desktop-poster { width: 220px; height: 300px; display: flex; align-items: center; justify-content: center; }
+.film-desktop-poster > img { width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 12px; box-shadow: 0 18px 48px #17191c26; }
+.film-desktop-poster > .film-poster, .film-desktop-poster > .film-loading-poster { width: 100%; height: 100%; border-radius: 12px; overflow: hidden; }
+.film-desktop-copy { min-width: 0; }
 .film-desktop .film-eyebrow { display: none; }
 .film-desktop .film-title { font-size: clamp(28px, 2.4vw, 38px); max-width: 800px; margin-bottom: 12px; }
 .film-desktop-play { min-width: 0; margin-top: 24px; }
@@ -104,26 +113,11 @@
 .film-desktop-description .detail-synopsis > h2 { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .film-desktop-description .detail-synopsis > p { margin: 0; font-size: 14px; line-height: 1.8; }
 .film-desktop-description .synopsis-collapsed { -webkit-line-clamp: 3; }
-.film-desktop-description .detail-synopsis > button { min-height: 36px; margin: 0; }
+.film-desktop-description .detail-synopsis > button { min-height: 44px; margin: 0; }
 .film-desktop-content { width: min(calc(100% - 2 * var(--film-gutter)), var(--film-content-width)); margin-inline: auto; padding: 0 0 48px; }
 .film-desktop-information { margin-top: 18px; }
-/* 素材不足时使用完整海报，不用竖图裁切替代通栏横图。 */
-.film-desktop-hero:not([data-has-backdrop]) { display: grid; grid-template-columns: fit-content(220px) minmax(0, 1fr); gap: 40px; justify-content: center; align-items: center; padding: 120px max(var(--film-gutter), calc((100% - var(--film-content-width)) / 2)) 40px; background: linear-gradient(145deg, #e9edf0, #fafafa 80%); }
-.film-desktop-hero:not([data-has-backdrop]) .film-desktop-scene { height: auto; min-height: 0; background: transparent; display: flex; justify-content: center; }
-.film-desktop-hero:not([data-has-backdrop]) .film-desktop-scene::after { display: none; }
-.film-desktop-hero:not([data-has-backdrop]) .film-desktop-scene > img { width: 100%; height: auto; max-width: 100%; max-height: 540px; object-fit: contain; border-radius: 12px; box-shadow: 0 18px 48px #17191c20; }
-.film-desktop-hero:not([data-has-backdrop]) .film-desktop-intro { width: auto; margin: 0; padding: 0; min-width: 0; }
-.film-desktop[data-has-artwork="false"] .film-desktop-hero:not([data-has-backdrop]) { grid-template-columns: minmax(0, var(--film-content-width)); padding-bottom: 36px; }
-.film-desktop[data-has-artwork="false"] .film-desktop-scene { display: none; }
-
-/* 低清素材以高斯模糊铺成氛围层，清晰前景与文字独立于滤镜。 */
-.film-desktop-hero[data-ambient] .film-desktop-scene { position: absolute; inset: 0; height: 100%; min-height: 0; }
-.film-desktop-hero[data-ambient] .film-desktop-scene > img { filter: blur(32px); transform: scale(1.12); opacity: .28; }
-.film-desktop-hero[data-ambient] .film-desktop-scene::after { background: linear-gradient(180deg, #fafafa55, #fafafad9 70%, #fafafa); }
-.film-desktop-hero[data-ambient] .film-desktop-intro { display: grid; grid-template-columns: fit-content(220px) minmax(0, 1fr); gap: 40px; align-items: center; justify-content: center; margin-top: 0; padding: 120px 0 40px; }
-.film-desktop-copy { min-width: 0; }
-.film-desktop-poster { display: flex; align-items: center; justify-content: flex-start; max-width: 220px; }
-.film-desktop-poster > img { width: 100%; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 18px 48px #17191c26; }
+.detail-no-synopsis { font-size: 12px; color: var(--detail-muted); line-height: 1.8; }
+.film-mobile-content > .detail-no-synopsis { margin-bottom: 18px; }
 
 /* 无分集图片时直接呈现文字选集，不预留缩略图空间。 */
 .film-desktop .episode-picker .episode-tiles { grid-template-columns: repeat(auto-fill, minmax(min(144px, 100%), 1fr)); gap: 10px; }

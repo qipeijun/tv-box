@@ -2847,7 +2847,7 @@ body {
 .episode-heading-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px; min-width: 0; }
 .episode-heading-controls .episode-playing { max-width: 32ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .episode-order { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--border); border-radius: 9px; }
-.episode-order button { min-height: 38px; padding: 6px 12px; border-radius: 6px; font-size: 12px; color: var(--muted-foreground); }
+.episode-order button { min-height: 44px; padding: 6px 12px; border-radius: 6px; font-size: 12px; color: var(--muted-foreground); }
 .episode-order button[aria-pressed="true"] { background: #8882; color: var(--foreground); }
 .episode-group-navigation { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
 .episode-group-navigation > button { display: grid; place-items: center; width: 44px; min-height: 44px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 8px; }
@@ -2856,7 +2856,12 @@ body {
 .episode-group-navigation > select { min-width: 0; max-width: calc(100% - 104px); min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--foreground); background: var(--background); }
 .episode-picker[data-full-name] .episode-tiles { grid-template-columns: repeat(auto-fill, minmax(min(144px, 100%), 1fr)); }
 .episode-picker .episode-tile { position: relative; padding-inline: 22px; }
-.episode-picker .episode-tile > span { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.episode-picker .episode-tile > span { display: block; min-width: 0; }
+.episode-picker .episode-name { display: block; white-space: nowrap; }
+.episode-picker[data-long-names] .episode-tiles { grid-template-columns: repeat(auto-fill, minmax(min(144px, 100%), 1fr)); }
+.episode-picker[data-long-names] .episode-name { white-space: normal; overflow-wrap: anywhere; font-size: 13px; line-height: 1.6; }
+.episode-locate { min-height: 44px; padding: 6px 10px; font-size: 12px; color: var(--foreground); text-decoration: underline; text-underline-offset: 4px; }
+.episode-locate:hover, .episode-order button:hover:not([aria-pressed="true"]) { background: #8881; }
 .episode-picker .episode-current-icon { position: absolute; left: 7px; top: 50%; transform: translateY(-50%); width: 10px; height: 10px; }
 .episode-picker .episode-duplicate { display: block; font-size: 10px; font-weight: 400; }
 .episode-notice { font-size: 12px; color: var(--muted-foreground); line-height: 1.8; margin: 4px 0 20px; }

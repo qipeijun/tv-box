@@ -63,7 +63,7 @@ export function EpisodePicker({
   const currentGroup = Math.min(
     group.key === groupKey
       ? group.index
-      : Math.max(0, activeGroupIndex),
+      : activeLabel === "待播放" ? 0 : Math.max(0, activeGroupIndex),
     Math.max(0, groups - 1),
   );
   useLayoutEffect(() => {
