@@ -5,7 +5,7 @@
   "type": "module",
   "packageManager": "npm@11.19.0",
   "scripts": {
-    "dev": "concurrently -k -n api,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev": "node scripts/dev-lan.mjs",
     "dev:lan": "node scripts/dev-lan.mjs",
     "dev:web": "vite --port 5190 --strictPort",
     "dev:api": "node --watch server/index.js",

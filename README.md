@@ -18,7 +18,7 @@ npm run verify:production
 npm start
 ```
 
-打开 http://127.0.0.1:4781。默认仅本机可访问；启动前检查并复用已有服务。开发使用 `npm run dev`，Web 端口 5190、API 端口 4781。
+打开 http://127.0.0.1:4781。默认仅本机可访问；启动前检查并复用已有服务。开发使用 `npm run dev`，同时启动前后端并打印本机及局域网访问地址；Web 端口 5190、API 端口 4781。
 
 - [运行、源兼容和操作说明](docs/development/local-run.md)
 - [局域网、域名部署、验证与回滚](docs/deployment/web-v1.md)

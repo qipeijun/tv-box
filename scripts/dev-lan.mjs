@@ -5,10 +5,11 @@ import { spawn } from "node:child_process";
 const addresses = [...new Set(Object.values(networkInterfaces()).flat()
   .filter((entry) => entry && entry.family === "IPv4" && !entry.internal)
   .map((entry) => entry.address))];
-if (!addresses.length) throw new Error("未找到局域网 IPv4 地址，请检查网络连接。");
 const origins = addresses.map((address) => `http://${address}:5190`);
-console.log(`局域网热更新地址：\n${origins.join("\n")}`);
-const child = spawn("npm", ["run", "dev"], {
+console.log("本机热更新地址：http://127.0.0.1:5190");
+if (origins.length) console.log(`局域网热更新地址：\n${origins.join("\n")}`);
+else console.log("未检测到局域网 IPv4 地址，当前可通过本机地址访问。");
+const child = spawn("npm", ["exec", "--", "concurrently", "-k", "-n", "api,web", "npm:dev:api", "npm:dev:web"], {
   stdio: "inherit",
   env: {
     ...process.env,
